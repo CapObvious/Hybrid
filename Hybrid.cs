@@ -1,4 +1,4 @@
-﻿using HybridEmu.Core.Connection;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,22 +21,10 @@ namespace HybridEmu
             _ThreadListener.Priority = ThreadPriority.Highest;
             _ThreadListener.Start();
 
-            Hybrid.socketListener().Init(21);
+    
             
         }
 
-        public static ServerBootstrap socketListener()
-        {
-            return new ServerBootstrap();
-        }
-
-        private static void acceptConnection()
-        {
-            while (true)
-            {
-                Thread.Sleep(1);
-            }
-        }
 
     }
 }
